@@ -1,0 +1,33 @@
+SELECT * FROM persona WHERE rfc = 'MEFI851023M9A';
+
+SELECT * FROM comprobante_fiscal
+WHERE rfc_emisor = 'MEFI851023M9A'
+AND comprobante_fiscal.mes = 'Enero';
+
+SELECT comprobante_fiscal.mes, comprobante_fiscal.rfc_emisor 
+FROM persona INNER JOIN comprobante_fiscal 
+ON persona.rfc = comprobante_fiscal.rfc_emisor
+WHERE rfc_emisor = 'MEFI851023M9A'
+AND comprobante_fiscal.mes = 'Enero';
+
+SELECT firstname, secondname, firstsurname, secondsurname 
+FROM person 
+WHERE rfc ILIKE '%{$rfc}%';
+
+SELECT comprobante_fiscal.mes, comprobante_fiscal.rfc_emisor 
+FROM persona 
+INNER JOIN comprobante_fiscal 
+ON persona.rfc = comprobante_fiscal.rfc_emisor 
+WHERE rfc_emisor = '{$rfc}'";
+
+SELECT persona.* ,comprobante_fiscal.mes 
+FROM persona 
+INNER JOIN comprobante_fiscal 
+ON persona.rfc = comprobante_fiscal.rfc_emisor 
+WHERE rfc_emisor = '{$rfc}'";
+
+SELECT comprobante_fiscal.mes 
+FROM persona 
+INNER JOIN comprobante_fiscal 
+ON persona.rfc = comprobante_fiscal.rfc_emisor 
+WHERE rfc_emisor = '{$rfc}'";

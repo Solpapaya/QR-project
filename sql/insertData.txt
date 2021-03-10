@@ -1,0 +1,15 @@
+INSERT INTO person (firstname, secondname, firstsurname, secondsurname, rfc) VALUES 
+('Carmina', null, 'Sumano', 'Chavez', 'SUCC961125A15'),
+('Israel', 'Jezrael', 'Mendez', 'Frutero', 'MEFI851023M9A');
+
+INSERT INTO persona (primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, rfc) VALUES 
+('Carmina', null, 'Sumano', 'Chavez', 'SUCC961125A15'),
+('Israel', 'Jezrael', 'Mendez', 'Frutero', 'MEFI851023M9A');
+
+
+INSERT INTO comprobante_fiscal (mes, rfc_emisor) VALUES 
+('Julio', 'MEFI851023M9A'),
+('Enero', 'MEFI851023M9A'),
+('Enero', 'SUCC961125A15'),
+('Diciembre', 'SUCC961125A15'),
+('Octubre', 'MEFI851023M9A');

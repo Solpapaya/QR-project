@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Project</title>
+</head>
+<body>
+    <form action="php/upload.php" method="post" enctype="multipart/form-data">
+        <label for="month">Selecciona el Mes al que corresponde el Comprobante Fiscal</label>
+        <select name="month" id="month">
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Julio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        Selecciona el PDF del Comprobante Fiscal
+        <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+</body>
+</html>
