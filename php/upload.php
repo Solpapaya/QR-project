@@ -1,4 +1,3 @@
-
 <?php
     session_start();
     function runPythonScript($uploadFile, $month) {
@@ -24,6 +23,9 @@
         // $uploadFile = $uploadDir . basename($_FILES['fileToUpload']['name']);    
         // echo "<p>";
         $tmpPath = $_FILES['fileToUpload']['tmp_name'];
+        // echo "<pre>";
+        // var_dump($_POST);
+        // echo "</pre>";
         $month = $_POST['month'];
         // echo $month;
         runPythonScript($tmpPath, $month);

@@ -1,0 +1,87 @@
+.select-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $grayBorder;
+    border-radius: 1rem;
+    background-color: $grayButton;
+    color: $blue;
+    width: 100%;
+    height: $baseUnit * 3;
+    overflow: hidden;
+    transition: $timing;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: $baseUnit*1.3;
+        right: $baseUnit;
+        border: $baseUnit/3 solid;
+        border-color: $gray transparent transparent transparent;
+        cursor: pointer;
+        transition: $timing ease-in-out;
+    }
+    
+    input {
+        width: 1px;
+        height: 1px;
+        display: inline-block; 
+        position: absolute; 
+        opacity: 0.01; 
+    }
+    
+    label {
+        padding: 0;
+        margin: 0;
+        padding-left: $baseUnit;
+        max-height: $baseUnit * 3;
+        min-height: $baseUnit * 3;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-top: 1px solid $grayBorder;
+        cursor: pointer;
+        // transition: $timing ease-in-out;
+
+        &:first-of-type {
+            margin-top: $baseUnit * 3;
+        }
+
+        &:hover {
+            background-color: $blue;
+            // background-color: $black;
+            color: $white;
+            transition: $timing - 0.3 ease-in-out;
+        }
+    }
+
+    input:checked + label {
+        // background-color: $black;
+        position: absolute;
+        top: 0;
+        border-top: none;
+        width: 100%;
+        border-radius: 1rem;
+        background-color: $grayButton;
+        color: $blue;
+
+        &:hover {
+            background-color: $grayButton;
+            color: $blue;
+        }
+    }
+
+    input:checked + label:first-of-type {
+        margin-top: 0;
+        position: relative;
+    }
+}
+
+.select-container.selected {
+    height: $baseUnit * 3 * 12;
+
+    &::after {
+        transform: rotate(180deg);  
+        top: $baseUnit*1.3 - $baseUnit/3;
+    }
+}
