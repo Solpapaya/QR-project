@@ -1,0 +1,16 @@
+.header {
+    height: $baseUnit * 4;
+    display: flex;
+    align-items: center;
+    background-color: $cherry;
+}
+
+.nav {
+    padding: 0 $baseUnit * 1.5;
+
+    .logo {
+        display: flex;
+        color: $white;
+        font-size: 3rem;
+    }
+}

@@ -5,30 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Project</title>
+    <script src="https://kit.fontawesome.com/5c9c41b555.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <form action="php/upload.php" method="post" enctype="multipart/form-data">
-        <label for="month">Selecciona el Mes al que corresponde el Comprobante Fiscal</label>
-        <select name="month" id="month">
-            <option value="Enero">Enero</option>
-            <option value="Febrero">Febrero</option>
-            <option value="Marzo">Marzo</option>
-            <option value="Abril">Abril</option>
-            <option value="Mayo">Mayo</option>
-            <option value="Junio">Junio</option>
-            <option value="Julio">Julio</option>
-            <option value="Agosto">Agosto</option>
-            <option value="Septiembre">Septiembre</option>
-            <option value="Octubre">Octubre</option>
-            <option value="Noviembre">Noviembre</option>
-            <option value="Diciembre">Diciembre</option>
-        </select>
-        <br>
-        <br>
-        <br>
-        Selecciona el PDF del Comprobante Fiscal
-        <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
+    <header class="header">
+        <nav class="nav">
+            <a class="logo" href="index.html"><i class="fas fa-qrcode"></i></a>
+        </nav>
+    </header>
+    <main>
+        <section class="upload container">
+            <h2>Sube tu Comprobante Fiscal</h2>
+            <form action="php/upload.php" method="post" enctype="multipart/form-data">
+                <div class="field">
+                    <label for="month">Selecciona el Mes al que corresponde el Comprobante Fiscal</label>
+                    <select class="select" name="month" id="month">
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                </div>
+                
+                <div class="field">
+                    <label for="fileToUpload">Selecciona el PDF del Comprobante Fiscal</label>
+                    <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload">
+                </div>
+                <input type="submit" value="Upload Image" name="submit">
+            </form>
+        </section>
+    </main>
+
+    <script src="build/js/bundle.min.js"></script>
 </body>
 </html>

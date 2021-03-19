@@ -3,22 +3,11 @@
     session_start();
     function runPythonScript($uploadFile, $month) {
         $output=null;
-        $retval=null;
-        exec("py ../py/readQR.py $uploadFile", $output, $retval);
-        // echo "Returned with status $retval and output:\n";
-        // print_r($output);
-        // var_dump(strpos($output[0], "re="));
+        exec("py ../py/readQR.py $uploadFile", $output);
+        
         $start = strpos($output[0], "re=");
-        // var_dump(strpos($output[0], "&rr="));
+        
         $end = strpos($output[0], "&rr=");
-        // echo "<br>";
-        // echo "Start: {$start} End: {$end}";
-        // echo "<br>";
-        // echo "Sum: " . ($end - ($start + 3));
-        // echo "<br>";
-        // var_dump(substr($output[0], $start + 3, ($end - ($start + 3))));
-        // var_dump(substr($output[0], $end, 2));
-        // var_dump(substr($output[0], 0 + 3, 1));
 
         $rfc = substr($output[0], $start + 3, ($end - ($start + 3)));
         $_SESSION["data"] = [$rfc, $month];
