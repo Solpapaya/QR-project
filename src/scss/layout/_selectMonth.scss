@@ -1,3 +1,56 @@
+.select-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid $grayBorder;
+    border-radius: 1rem;
+    background-color: $grayButton;
+    color: $blue;
+    width: 100%;
+    height: $baseUnit * 3;
+    padding-left: $baseUnit;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: $baseUnit*1.3;
+        right: $baseUnit;
+        border: $baseUnit/3 solid;
+        border-color: $gray transparent transparent transparent;
+        cursor: pointer;
+        transition: $timing ease-in-out;
+    }
+}
+
+.month-container {
+    display: grid;
+    grid-template-columns: repeat(4, $baseUnit*3);
+    grid-template-rows: repeat(3, $baseUnit*3);
+    // gap: $baseUnit;
+    border: 1px solid $blue;
+    border-radius: 1rem;
+    // padding: $baseUnit 0;
+    // width: 50%;
+    margin: $baseUnit/2 auto 0 auto;
+    width: fit-content;
+    
+
+    input {
+        width: 1px;
+        height: 1px;
+        display: inline-block; 
+        position: absolute; 
+        opacity: 0.01; 
+    }
+
+    label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
 .select-container {
     position: relative;
     display: flex;
