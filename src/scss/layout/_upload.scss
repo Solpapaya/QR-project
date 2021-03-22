@@ -1,4 +1,4 @@
-.upload {
+.upload-section {
     background-color: $white;
     border-radius: 1rem;
     padding: $baseUnit * 2;
@@ -7,10 +7,20 @@
 
     h2 {
         margin-top: 0;
+        text-align: center;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
-    .field {
+    .field:not(:last-of-type) {
         margin: $baseUnit * 2 0;
+        
+        @include mobile {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 }
 

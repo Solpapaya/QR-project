@@ -1,7 +1,11 @@
 @import 'base/normalize';
 @import 'base/variables';
 @import 'base/globals';
+@import 'base/mixins.scss';
 
 @import 'layout/header';
 @import 'layout/upload';
+@import 'layout/formUpload';
 @import 'layout/selectMonth';
+@import 'layout/uploadInput';
+@import 'layout/loadingAnimation'

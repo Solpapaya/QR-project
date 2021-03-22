@@ -7,14 +7,19 @@
     background-color: $grayButton;
     color: $blue;
     width: 100%;
-    height: $baseUnit * 3;
+    margin: 0 auto;
+    height: $baseUnit * 2;
     padding-left: $baseUnit;
     cursor: pointer;
+
+    @include mobile {
+        width: 15rem;
+    }
 
     &::after {
         content: "";
         position: absolute;
-        top: $baseUnit*1.3;
+        top: $baseUnit/1.2;
         right: $baseUnit;
         border: $baseUnit/3 solid;
         border-color: $gray transparent transparent transparent;
@@ -94,6 +99,6 @@
 
     &::after {
         transform: rotate(180deg);  
-        top: $baseUnit*1.3 - $baseUnit/3;
+        top: $baseUnit/1.2 - $baseUnit/3;
     }
 }
