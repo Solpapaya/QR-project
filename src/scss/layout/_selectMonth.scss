@@ -21,6 +21,11 @@
         cursor: pointer;
         transition: $timing ease-in-out;
     }
+
+    &:hover,
+    &.selected {
+        background-color: $grayInputHover;
+    }
 }
 
 .month-container {
@@ -29,7 +34,8 @@
     grid-template-rows: repeat(3, $baseUnit*3);
     border: 1px solid $grayBorder;
     border-radius: 1rem;
-    background-color: $grayButton;
+    // background-color: $grayButton;
+    background-color: $grayInputHover;
     width: fit-content;
     margin: 0 auto 0 auto;
     height: 0;
