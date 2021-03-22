@@ -17,6 +17,7 @@
         </nav>
     </header>
     <main>
+        <!-- Achieve stay on same page when uploading a file -->
         <section class="upload-section container">
             <h2>Sube tu Comprobante Fiscal</h2>
             <form class="form" action="uploadedFile.php" method="post" enctype="multipart/form-data">
