@@ -10,7 +10,10 @@ if($_FILES["fileToUpload"]["error"] == 0) {
 
     $data = getDataForTable($rfc); 
     if(in_array($month, $data["mes"])) {
-        echo "Este mes ya ha sido subido antes";
+        // Show alert indicating that month has previously been added?>
+        <div class="alert">Hello</div>
+
+        <?php
     }
     ?>
 
