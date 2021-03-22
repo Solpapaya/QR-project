@@ -3,5 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function startApp() {
-    selectAnimation();
+    // selectAnimation();
+    monthInput();
 }
