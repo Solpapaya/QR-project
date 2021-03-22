@@ -1,3 +1,10 @@
+# #!/usr/local/bin/python
+# import cgi
+# import sys
+# print ("Hello From Python")
+# pdfPath = sys.argv[1]
+# print(pdfPath)
+
 import cgi, os
 import cv2
 import os
@@ -20,8 +27,9 @@ def deleteFile(pdf):
    os.remove(pdf)
 
 # Path to poppler
-popplerPath = Path("../py/poppler-21.02.0/Library/bin/")
-pdfPath = sys.argv[1]
+popplerPath = Path("C:/xampp/htdocs/SocialService/QR-project/py/poppler-21.02.0/Library/bin/")
+# pdfPath = Path("C:/xampp/htdocs/SocialService/QR-project/" + sys.argv[1])
+pdfPath = Path(sys.argv[1])
 
 
 # Store Pdf with convert_from_path function

@@ -13,13 +13,14 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <a class="logo" href="index.html"><i class="fas fa-qrcode"></i></a>
+            <a class="logo" href="index.php"><i class="fas fa-qrcode"></i></a>
         </nav>
     </header>
     <main>
         <section class="upload-section container">
             <h2>Sube tu Comprobante Fiscal</h2>
-            <form class="form" action="php/upload.php" method="post" enctype="multipart/form-data">
+            <form class="form" action="uploadedFile.php" method="post" enctype="multipart/form-data">
+            <!-- <form class="form" method="post" enctype="multipart/form-data"> -->
                 <!-- Show table in the same page -->
                 <div class="field">
                     <p>Selecciona el Mes al que corresponde el Comprobante Fiscal</p>
@@ -46,7 +47,7 @@
                         <div class="flex-upload-container">
                             <label for="fileToUpload">Subir Archivo</label>
                         </div>
-                        <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload" onchange="this.form.submit()">
+                        <!-- <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload" onchange="this.form.submit()"> -->
                     </div>
                 </div>
                 <!-- <input type="submit" value="Upload Image" name="submit"> -->

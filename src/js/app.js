@@ -4,5 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function startApp() {
     // selectAnimation();
+    resetFileInput();
     monthInput();
 }
