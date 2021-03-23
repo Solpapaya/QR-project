@@ -1,0 +1,20 @@
+.loading-container {
+    // background-color: lighten($color: $black, $amount: 50%);
+    // opacity: 0.3;
+    background-color: rgba($color: #9ea9b3, $alpha: 0.3);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin: 0 auto;
+}

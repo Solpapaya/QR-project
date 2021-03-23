@@ -20,8 +20,8 @@
         <!-- Achieve stay on same page when uploading a file -->
         <section class="upload-section container">
             <h2>Sube tu Comprobante Fiscal</h2>
-            <form class="form" action="uploadedFile.php" method="post" enctype="multipart/form-data">
-            <!-- <form class="form" method="post" enctype="multipart/form-data"> -->
+            <!-- <form class="form" action="uploadedFile.php" method="post" enctype="multipart/form-data"> -->
+            <form class="form" onsubmit="loadingAnimation();return false" method="post" enctype="multipart/form-data">
                 <!-- Show table in the same page -->
                 <div class="field">
                     <p>Selecciona el Mes al que corresponde el Comprobante Fiscal</p>
@@ -51,12 +51,16 @@
                         <!-- <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload" onchange="this.form.submit()"> -->
                     </div>
                 </div>
-                <!-- <input type="submit" value="Upload Image" name="submit"> -->
+                <input type="submit" value="Upload Image" name="submit">
             </form>
             <!-- <div class="lds-dual-ring"></div> -->
-            <!-- <div class="lds-ring"><div></div><div></div><div></div><div></div></div> -->
         </section>
     </main>
+    <!-- <div class="loading-container">
+        <div class="loading">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div> -->
 
     <script src="build/js/bundle.min.js"></script>
 </body>

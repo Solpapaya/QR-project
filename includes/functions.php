@@ -1,7 +1,7 @@
 <?php 
 function runPythonScript($uploadFile) {
     $output=null;
-    exec("py py/readQR.py $uploadFile 2>&1", $output);
+    exec("py ../py/readQR.py $uploadFile 2>&1", $output);
 
     $start = strpos($output[0], "re=");
     
@@ -9,12 +9,14 @@ function runPythonScript($uploadFile) {
 
     $rfc = substr($output[0], $start + 3, ($end - ($start + 3)));
 
-    return $rfc;
+    $date = $output[1];
+
+    return [$rfc, $date];
 }
 
 function getDataForTable($rfc) {
     // Import connexion
-    require_once 'includes/database.php';
+    require_once 'database.php';
 
     // SQL query
     $sqlPerson = "SELECT * FROM persona WHERE rfc = '{$rfc}'";
