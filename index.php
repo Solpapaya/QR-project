@@ -42,7 +42,14 @@
             <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
         </div>
     </div> -->
-
+    <!-- <div class="alert-container out">
+        <div class="alert out">
+            <span>X</span>
+            <p class="alert-title">El archivo no se puede subir</p> 
+            <p class="alert-info">El formato debe ser PDF</p>
+            <button class="button">Ok</button>
+        </div>
+    </div> -->
     <script src="build/js/bundle.min.js"></script>
 </body>
 </html>

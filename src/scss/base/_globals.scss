@@ -27,6 +27,12 @@ a {
     text-decoration: none;
 }
 
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 .container {
     width: 95%;
     max-width: 120rem;

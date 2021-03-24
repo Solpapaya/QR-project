@@ -57,7 +57,7 @@ function handleDrop(e) {
         inputSubmit.click();
     }else {
         // Alert the user the file is not in PDF format
-        console.log("Your file must be PDF format");
+        showErrorAlert();
     }
 }
 
