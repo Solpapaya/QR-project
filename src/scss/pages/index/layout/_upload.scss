@@ -1,26 +1,34 @@
+main.not-uploaded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
 .upload-section {
     background-color: $white;
     border-radius: 1rem;
     padding: $baseUnit * 2;
-    margin-top: $baseUnit;
     border: 1px solid $grayBorder;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+
+    &.highlight {
+        border: 3px dashed $blue;
+    }
+
+    @include mobile {
+        width: 50%;
+    }
 
     h2 {
         margin-top: 0;
+        margin-bottom: $baseUnit;
         text-align: center;
-
-        @include mobile {
-            text-align: center;
-        }
-    }
-
-    .field:not(:last-of-type) {
-        margin: $baseUnit * 2 0;
-        
-        @include mobile {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
     }
 }
-

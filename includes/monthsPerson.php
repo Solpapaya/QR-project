@@ -1,6 +1,6 @@
 <?php
 $tmpPath = $_FILES['fileToUpload']['tmp_name'];
-$month = $_POST['month'];
+// $month = $_POST['month'];
 
 require_once 'functions.php';
 $result = runPythonScript($tmpPath);

@@ -1,15 +1,8 @@
 .form {
-    @include mobile {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: $baseUnit*2;
-    }
-
     .field {
         p {
-            @include mobile {
-                text-align: center;
-            }
+            margin: 0;
+            margin-bottom: $baseUnit*2;
         }
     }
 

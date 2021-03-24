@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
-<body>
+<body class="not-uploaded">
     <header class="header">
         <nav class="nav">
             <a class="logo" href="index.php"><i class="fas fa-qrcode"></i></a>
         </nav>
     </header>
-    <main>
+    <main class="not-uploaded">
         <!-- Achieve stay on same page when uploading a file -->
         <section class="upload-section container">
             <h2>Sube tu Comprobante Fiscal</h2>
@@ -24,27 +24,8 @@
             <form class="form" onsubmit="loadingAnimation();return false" method="post" enctype="multipart/form-data">
                 <!-- Show table in the same page -->
                 <div class="field">
-                    <p>Selecciona el Mes al que corresponde el Comprobante Fiscal</p>
-                    <div class="select-input">Enero</div>
-                    <div class="month-container">
-                        <input type="radio" name="month" id="Enero" value="Enero" checked> <label for="Enero">Ene</label>
-                        <input type="radio" name="month" id="Febrero" value="Febrero"> <label for="Febrero">Feb</label>
-                        <input type="radio" name="month" id="Marzo" value="Marzo"> <label for="Marzo">Mar</label>
-                        <input type="radio" name="month" id="Abril" value="Abril"> <label for="Abril">Abr</label>
-                        <input type="radio" name="month" id="Mayo" value="Mayo"> <label for="Mayo">May</label>
-                        <input type="radio" name="month" id="Junio" value="Junio"> <label for="Junio">Jun</label>
-                        <input type="radio" name="month" id="Julio" value="Julio"> <label for="Julio">Jul</label>
-                        <input type="radio" name="month" id="Agosto" value="Agosto"> <label for="Agosto">Ago</label>
-                        <input type="radio" name="month" id="Septiembre" value="Septiembre"> <label for="Septiembre">Sep</label>
-                        <input type="radio" name="month" id="Octubre" value="Octubre"> <label for="Octubre">Oct</label>
-                        <input type="radio" name="month" id="Noviembre" value="Noviembre"> <label for="Noviembre">Nov</label>
-                        <input type="radio" name="month" id="Diciembre" value="Diciembre"> <label for="Diciembre">Dic</label>
-                    </div>
-                </div>
-                
-                <div class="field">
                     <div class="upload-input-container">
-                        <p>Selecciona el PDF del Comprobante Fiscal</p>
+                        <p>Arrastra aquí el PDF del Comprobante Fiscal o puedes dar click en el botón para seleccionarlo</p>
                         <div class="flex-upload-container">
                             <label for="fileToUpload">Subir Archivo</label>
                         </div>

@@ -10,7 +10,12 @@ function resetFileInput() {
     fileInput.id = "fileToUpload";
     fileInput.addEventListener('change', function() {
         // this.form.submit();
-        inputSubmit.click();
+        if(validateFile(this.files[0])) {
+            inputSubmit.click();
+        } else {
+            // Alert the user the file is not in PDF format
+            console.log("Your file must be PDF format");
+        }
     })
 
     inputContainer.appendChild(fileInput);
