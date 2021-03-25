@@ -27,7 +27,7 @@
                     <div class="upload-input-container">
                         <p>Arrastra aquí el PDF del Comprobante Fiscal o puedes dar click en el botón para seleccionarlo</p>
                         <div class="flex-upload-container">
-                            <label for="fileToUpload">Subir Archivo</label>
+                            <label class="no-select" for="fileToUpload">Subir Archivo</label>
                         </div>
                         <!-- <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload" onchange="this.form.submit()"> -->
                     </div>

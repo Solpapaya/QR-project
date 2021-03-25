@@ -10,13 +10,6 @@ body {
     font-size: $baseUnit;
     font-family: $mainFont;
     background-color: $grayBackground;
-
-    &.not-uploaded {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 6.4rem auto;
-        row-gap: $baseUnit;
-    }
 }
 
 p {
