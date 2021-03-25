@@ -28,6 +28,12 @@
     100%{opacity: 1; width: 0.5rem; height: 5rem;}
 }
 
+@keyframes popInCrossCircle {
+    0%{opacity: 0; height: 0; width: 0;}
+    50%{opacity: 0.7; height: 3rem; width: 9rem;}
+    100%{opacity: 1; height: 9rem; width: 9rem;}
+}
+
 body {
     &.alert {
         overflow: hidden;
@@ -86,6 +92,7 @@ body {
             justify-content: center;
             align-items: center;
             margin-bottom: $baseUnit*2;
+            animation: popInCrossCircle $timing - 0.2;
 
             &::before {
                 content: "";

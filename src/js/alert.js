@@ -3,7 +3,7 @@ function showErrorAlert() {
     alertContainer.classList.add('alert-container', 'in');
 
     const alert = document.createElement('DIV');
-    alert.classList.add('alert', 'in');
+    alert.classList.add('alert', 'in', 'no-select');
 
     const x = document.createElement('SPAN');
     // x.textContent = 'X';
