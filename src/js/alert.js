@@ -6,7 +6,7 @@ function showErrorAlert() {
     alert.classList.add('alert', 'in');
 
     const x = document.createElement('SPAN');
-    x.textContent = 'X';
+    // x.textContent = 'X';
 
     const alertTitle = document.createElement('P');
     alertTitle.classList.add('alert-title');
@@ -29,7 +29,7 @@ function showErrorAlert() {
         setTimeout(() => {
             alertContainer.remove();
             document.body.classList.remove('alert');
-        }, 990);
+        }, 950);
     })
 
     alert.appendChild(x);
@@ -38,6 +38,21 @@ function showErrorAlert() {
     alert.appendChild(button);
 
     alertContainer.appendChild(alert);
+    alertContainer.addEventListener('click', function(e) {
+        if(e.target === this) {
+
+            alert.classList.remove('in');
+            alert.classList.add('out');
+    
+            this.classList.remove('in');
+            this.classList.add('out');
+    
+            setTimeout(() => {
+                this.remove();
+                document.body.classList.remove('alert');
+            }, 950);
+        }
+    })
 
     document.body.classList.add('alert');
     document.body.appendChild(alertContainer);

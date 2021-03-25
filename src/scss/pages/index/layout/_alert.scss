@@ -20,6 +20,12 @@
     100%{background-color: rgba($color: #555, $alpha: 0);}
 }
 
+@keyframes popInCross {
+    0%{opacity: 0; width: 0; height: 0;}
+    50%{opacity: 0.2; width: 0; height: 0;}
+    100%{opacity: 1; width: 0.5rem; height: 5rem;}
+}
+
 body {
     &.alert {
         overflow: hidden;
@@ -69,19 +75,43 @@ body {
 
         span {
             // background-color: $red;
-            width: 7rem;
-            height: 7rem;
+            position: relative;
+            width: 9rem;
+            height: 9rem;
             border-radius: 50%;
             border: 5px solid $red;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: $red;
-            font-size: $baseUnit*2.5;
-            font-stretch: ultra-expanded;
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            font-weight: $bold;
             margin-bottom: $baseUnit*2;
+
+            &::before {
+                content: "";
+                width: 0.5rem;
+                height: 5rem;
+                background-color: $red;
+                transform: rotate(45deg);
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                border-radius: 1rem;
+                animation: popInCross $timing;
+            }
+
+            &::after {
+                content: "";
+                width: 0.5rem;
+                height: 5rem;
+                background-color: $red;
+                transform: rotate(-45deg);
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                border-radius: 1rem;
+                animation: popInCross $timing;
+            }
         }
 
         .alert-title {

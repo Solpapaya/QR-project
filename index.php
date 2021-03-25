@@ -42,9 +42,9 @@
             <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
         </div>
     </div> -->
-    <!-- <div class="alert-container out">
-        <div class="alert out">
-            <span>X</span>
+    <!-- <div class="alert-container in">
+        <div class="alert in">
+            <span></span>
             <p class="alert-title">El archivo no se puede subir</p> 
             <p class="alert-info">El formato debe ser PDF</p>
             <button class="button">Ok</button>
