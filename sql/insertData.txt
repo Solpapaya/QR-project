@@ -6,6 +6,10 @@ INSERT INTO persona (primer_nombre, segundo_nombre, primer_apellido, segundo_ape
 ('Carmina', null, 'Sumano', 'Chavez', 'SUCC961125A15'),
 ('Israel', 'Jezrael', 'Mendez', 'Frutero', 'MEFI851023M9A');
 
+INSERT INTO comprobante_fiscal (fecha_emision, rfc_emisor) VALUES 
+('2020-10-12', 'MEFI851023M9A'),
+('2019-01-04', 'SUCC961125A15');
+
 
 INSERT INTO comprobante_fiscal (mes, rfc_emisor) VALUES 
 ('Julio', 'MEFI851023M9A'),

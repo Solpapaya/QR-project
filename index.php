@@ -21,7 +21,7 @@
         <section class="upload-section container">
             <h2>Sube tu Comprobante Fiscal</h2>
             <!-- <form class="form" action="uploadedFile.php" method="post" enctype="multipart/form-data"> -->
-            <form class="form" onsubmit="loadingAnimation();return false" method="post" enctype="multipart/form-data">
+            <form class="form" onsubmit="getData();return false" method="post" enctype="multipart/form-data">
                 <!-- Show table in the same page -->
                 <div class="field">
                     <div class="upload-input-container">

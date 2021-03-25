@@ -1,3 +1,26 @@
+SELECT 
+EXTRACT (YEAR FROM fecha_emision) AS anio_emision,
+EXTRACT (MONTH FROM fecha_emision) AS mes_emision
+FROM comprobante_fiscal
+WHERE rfc_emisor = 'MEFI851023M9A';
+
+SELECT 
+EXTRACT (YEAR FROM fecha_emision) AS anio_emision,
+EXTRACT (MONTH FROM fecha_emision) AS mes_emision
+FROM comprobante_fiscal
+WHERE rfc_emisor = 'MEFI851023M9A' 
+AND EXTRACT(MONTH FROM fecha_emision) = 10 
+AND EXTRACT(YEAR FROM fecha_emision) = 2020;
+
+SELECT 
+EXTRACT (YEAR FROM fecha_emision) AS anio_emision,
+EXTRACT (MONTH FROM fecha_emision) AS mes_emision
+FROM comprobante_fiscal
+WHERE rfc_emisor = 'SUCC961125A15' 
+AND EXTRACT(MONTH FROM fecha_emision) = 1 
+AND EXTRACT(YEAR FROM fecha_emision) = 2019;
+
+
 SELECT * FROM persona WHERE rfc = 'MEFI851023M9A';
 
 SELECT * FROM comprobante_fiscal

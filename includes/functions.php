@@ -1,21 +1,19 @@
 <?php 
 function runPythonScript($uploadFile) {
-    try {
-        $output=null;
-        exec("py ../py/readQR.py $uploadFile 2>&1", $output);
+    $output=null;
+    exec("py ../py/readQR.py $uploadFile 2>&1", $output);
     
-        $start = strpos($output[0], "re=");
-        
-        $end = strpos($output[0], "&rr=");
+    if(count($output) == 1) return $output;
+
+    $start = strpos($output[0], "re=");
     
-        $rfc = substr($output[0], $start + 3, ($end - ($start + 3)));
-    
-        $date = $output[1];
-    
-        return [$rfc, $date];
-    }catch(Exception $e) {
-        $e->getMessage();
-    }
+    $end = strpos($output[0], "&rr=");
+
+    $rfc = substr($output[0], $start + 3, ($end - ($start + 3)));
+
+    $date = $output[1];
+
+    return [$rfc, $date];
 }
 
 function getDataForTable($rfc) {

@@ -45,6 +45,9 @@ pdfPath = Path(sys.argv[1])
 
 
 # Store Pdf with convert_from_path function
-images = convert_from_path(pdf_path = pdfPath, poppler_path = popplerPath)
-read_barcodes(images[0])
-read_date(images[0])
+try:
+   images = convert_from_path(pdf_path = pdfPath, poppler_path = popplerPath)
+   read_barcodes(images[0])
+   read_date(images[0])
+except:
+   print("Python Script Error")

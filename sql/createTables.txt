@@ -7,6 +7,15 @@ CREATE TABLE persona (
  rfc VARCHAR(13) NOT NULL PRIMARY KEY
 );
 
+CREATE TABLE comprobante_fiscal (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    fecha_emision DATE NOT NULL,    
+    rfc_emisor VARCHAR(13) NOT NULL,
+    CONSTRAINT fk_persona
+        FOREIGN KEY(rfc_emisor)
+            REFERENCES persona(rfc)
+);
+
 CREATE TYPE mes AS ENUM ('Enero', 'Febrero', 
 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 
 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 

@@ -1,6 +1,6 @@
-async function loadingAnimation(file) {
+async function getData() {
     createLoading();
-    await retrieveDataTable(file);
+    await fetchData();
     deleteLoading();
 }
 
@@ -30,7 +30,7 @@ function createLoading() {
     document.body.appendChild(loadingContainer);
 }
 
-async function retrieveDataTable(file) {
+async function fetchData() {
     const form = new FormData(document.querySelector(".form"));
     try {
         const url = 'http://localhost/SocialService/QR-project/includes/monthsPerson.php';
