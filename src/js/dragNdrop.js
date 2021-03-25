@@ -48,7 +48,9 @@ function handleDrop(e) {
     const dt = e.dataTransfer;
     const files = dt.files;
 
-    if(validateFile(files[0])) {
+    const {boolean, errorInfo} = validateFile(files);
+
+    if(boolean) {
         // Decode the QR code and retrieve the Date from the PDF Tax Receipt
         const inputFile = document.querySelector('input[type=file]');
         inputFile.files = files;
@@ -57,7 +59,7 @@ function handleDrop(e) {
         inputSubmit.click();
     }else {
         // Alert the user the file is not in PDF format
-        showErrorAlert();
+        showErrorAlert(errorInfo);
     }
 }
 
@@ -69,10 +71,11 @@ function unhighlight(dropArea) {
     dropArea.classList.remove('highlight');
 }
 
-function validateFile(file) {
-    if(file.type === 'application/pdf')  {
-        return true;       
+function validateFile(files) {
+    if(files.length > 1) return {boolean: false, errorInfo: "Subir 1 archivo a la vez"};
+    if(files[0].type === 'application/pdf')  {
+        return {boolean: true};       
     } else {
-        return false;
+        return {boolean: false, errorInfo: "El formato debe ser PDF"};
     }
 }

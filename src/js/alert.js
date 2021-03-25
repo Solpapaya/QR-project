@@ -1,4 +1,4 @@
-function showErrorAlert() {
+function showErrorAlert(errorInfo) {
     const alertContainer = document.createElement('DIV');
     alertContainer.classList.add('alert-container', 'in');
 
@@ -14,7 +14,7 @@ function showErrorAlert() {
 
     const alertInfo = document.createElement('P');
     alertInfo.classList.add('alert-info');
-    alertInfo.textContent = 'El formato debe ser PDF';
+    alertInfo.textContent = errorInfo;
 
     const button = document.createElement('BUTTON');
     button.classList.add('button');
