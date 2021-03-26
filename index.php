@@ -1,3 +1,4 @@
+<!-- Change dashboard appearance -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
