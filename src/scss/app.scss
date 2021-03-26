@@ -4,13 +4,15 @@
 @import 'base/mixins.scss';
 @import 'base/utilities';
 
-@import 'pages/index/layout/header';
-@import 'pages/index/layout/upload';
-@import 'pages/index/layout/formUpload';
-@import 'pages/index/layout/selectMonth';
-@import 'pages/index/layout/uploadInput';
-@import 'pages/index/layout/loading';
-@import 'pages/index/layout/loadingAnimation';
-@import 'pages/index/layout/alert';
+@import 'pages/index/dashboard';
 
-@import 'pages/uploadedFile/layout/table';
+// @import 'pages/index/layout/header';
+// @import 'pages/index/layout/upload';
+// @import 'pages/index/layout/formUpload';
+// @import 'pages/index/layout/selectMonth';
+// @import 'pages/index/layout/uploadInput';
+// @import 'pages/index/layout/loading';
+// @import 'pages/index/layout/loadingAnimation';
+// @import 'pages/index/layout/alert';
+
+// @import 'pages/uploadedFile/layout/table';
