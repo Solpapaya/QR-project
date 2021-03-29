@@ -9,7 +9,7 @@
 
 // Fix margin in order to not being selectable
 
-.right-bottom-radius {
+.right-bottom-border {
     position: relative;
     border-bottom: 12px solid $white;
     border-right: 12px solid $white;
@@ -25,7 +25,7 @@
     }
 }
 
-.right-top-radius {
+.right-top-border {
     position: relative;
     border-top: 12px solid $white;
     border-right: 12px solid $white;
@@ -41,7 +41,7 @@
     }
 }
 
-.right-radius {
+.right-border {
     border-right: 12px solid $white;   
 }
 
