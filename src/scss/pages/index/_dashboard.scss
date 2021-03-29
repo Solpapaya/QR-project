@@ -7,18 +7,21 @@ body {
 .sidebar {
     display: grid;
     background: $blueBackground;
-    // grid-auto-rows: minmax(min-content, max-content);
     grid-template-rows: repeat(3, minmax(min-content, max-content)) 1fr;
 
-    .logo {
+    .logo-container {
         display: flex;
         width: 100%;
         justify-content: center;
         padding-top: $baseUnit*3;
-        font-size: $baseUnit*4;
-        color: $white;
         padding-bottom: $baseUnit*6;
+
+        .logo {
+            font-size: $baseUnit*4;
+            color: $white;
+        }
     }
+    
 
     .sidebar-item {
         display: flex;
@@ -28,6 +31,7 @@ body {
         width: 100%;
         font-size: $baseUnit - 0.2rem;
         font-weight: $thin;
+        text-align: justify;
 
         .sidebar-item-icon {
             margin-right: $baseUnit;
@@ -45,9 +49,14 @@ body {
         font-weight: $bold;
         padding-top: 0.4rem;
         padding-bottom: 0.4rem;
+        padding-right: 0;
 
         .sidebar-item-icon {
             color: blue;
         }
+    }
+
+    button {
+        background-color: transparent;
     }
 }

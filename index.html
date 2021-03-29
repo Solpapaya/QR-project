@@ -13,21 +13,17 @@
 </head>
 <body class="not-uploaded">
     <aside class="sidebar">
-        <a class="logo right-radius" href="index.php"><i class="fas fa-qrcode"></i></a>
-        <!-- <div class="main-logo-container">
-        </div> -->
-        <a class="sidebar-item right-bottom-radius" href="#"><i class="fas fa-file sidebar-item-icon"></i> Subir Archivo <span class="border-radius"></span></a>
-        <a class="sidebar-item selected" href="#"><i class="fas fa-file sidebar-item-icon"></i> Editar Registros <span class="border-radius"></span></a>
+        <div class="logo-container right-radius">
+            <button class="logo" data-section="1"><i class="fas fa-qrcode"></i></button>
+        </div>
+        <button class="sidebar-item right-bottom-radius" data-section="1"><i class="fas fa-file sidebar-item-icon"></i> Subir Archivo <span class="border-radius"></span></button>
+        <button class="sidebar-item selected" data-section="2"><i class="fas fa-edit sidebar-item-icon"></i> Editar Registros <span class="border-radius"></span></button>
         <span class="right-top-radius"></span>
-        <!-- <i class="far fa-file sidebar-item-logo"></i> -->
     </aside>
     <main class="not-uploaded">
-        <!-- Achieve stay on same page when uploading a file -->
-        <section class="upload-section container">
+        <section id="section-1" class="upload-section container">
             <h2>Sube tu Comprobante Fiscal</h2>
-            <!-- <form class="form" action="uploadedFile.php" method="post" enctype="multipart/form-data"> -->
             <form class="form" onsubmit="getData();return false" method="post" enctype="multipart/form-data">
-                <!-- Show table in the same page -->
                 <div class="field">
                     <div class="upload-input-container">
                         <p>Arrastra aquí el PDF del Comprobante Fiscal o puedes dar click en el botón para seleccionarlo</p>
