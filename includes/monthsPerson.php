@@ -22,10 +22,6 @@ $year = $dateSplit[0];
 $month = $dateSplit[1];
 
 
-// // $data["year"] = $dateSplit[0];
-// // $data["month"] = $dateSplit[1];
-// // $data["day"] = $dateSplit[2];
-
 try {    
     // Import connexion
     require 'database.php';
@@ -60,7 +56,10 @@ try {
     }
 
     // Insert Date and RFC to Tax Receipt Table
-
+    $data["rfc"] = $rfc;
+    $data["date"] = $date;
+    $data["error"] = null;
+    echo json_encode($data);
 } catch(Exception $e) {
     // Couldn't stablish Database Connexion & Creates Error Message
     $data["error"]["id"] = 2;

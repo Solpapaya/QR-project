@@ -1,0 +1,157 @@
+// Make an alert feature (Maybe, change how it pops out and some animation to the cross circle container
+
+@keyframes popUpIn {
+    0%{opacity: 0; margin-top: -90%;}
+    75%{margin-top: 10%;}
+    100%{opacity: 1;}
+}
+
+@keyframes popUpOut {
+    0%{opacity: 1;}
+    75%{opacity: 1; margin-top: -50%;}
+    100%{opacity: 0;margin-top: 30%;}
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0%{background-color: rgba($color: #555, $alpha: 0.8);}
+    100%{background-color: rgba($color: #555, $alpha: 0);}
+}
+
+@keyframes popInCross {
+    0%{opacity: 0; width: 0; height: 0;}
+    50%{opacity: 0.2; width: 0; height: 0;}
+    100%{opacity: 1; width: 0.5rem; height: 5rem;}
+}
+
+@keyframes popInCrossCircle {
+    0%{opacity: 0; height: 0; width: 0;}
+    50%{opacity: 0.7; height: 3rem; width: 9rem;}
+    100%{opacity: 1; height: 9rem; width: 9rem;}
+}
+
+body {
+    &.alert {
+        overflow: hidden;
+    }
+}
+
+.alert-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    // background-color: rgba($color: #9ea9b3, $alpha: 0.3);
+    background-color: rgba($color: #555, $alpha: 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &.in {
+        animation: fadeIn $timing - 0.2;
+    }
+
+    &.out {
+        animation: fadeOut $timing + 0.5;
+    }
+
+
+    .alert {
+        // width: 20rem;
+        // height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white; 
+        border-radius: 1rem;
+        padding: $baseUnit*1.5 $baseUnit $baseUnit $baseUnit;
+
+        &.in {
+            animation: popUpIn $timing - 0.2;       
+        }
+
+        &.out {
+            animation: popUpOut $timing;
+            opacity: 0;
+        }
+
+        span {
+            // background-color: $red;
+            position: relative;
+            width: 9rem;
+            height: 9rem;
+            border-radius: 50%;
+            border: 5px solid $red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: $baseUnit*2;
+            animation: popInCrossCircle $timing - 0.2;
+
+            &::before {
+                content: "";
+                width: 0.5rem;
+                height: 5rem;
+                background-color: $red;
+                transform: rotate(45deg);
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                border-radius: 1rem;
+                animation: popInCross $timing;
+            }
+
+            &::after {
+                content: "";
+                width: 0.5rem;
+                height: 5rem;
+                background-color: $red;
+                transform: rotate(-45deg);
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                border-radius: 1rem;
+                animation: popInCross $timing;
+            }
+        }
+
+        .alert-title {
+            font-size: $baseUnit*2;
+            font-weight: $bold;
+            // color: darken($color: $gray, $amount: 7%);
+            color: lighten($color: $black, $amount: 10%);
+            margin-bottom: $baseUnit;
+        }
+
+        .alert-info {
+            color: lighten($color: $black, $amount: 10%);
+            font-size: $baseUnit*1.1;
+            margin-bottom: $baseUnit*2;
+        }
+
+        .button {
+            background-color: $bluedragNdrop;
+            width: 20%;
+            height: 5rem;
+            text-transform: uppercase;
+            color: $white;
+            border-radius: 1rem;
+
+            &:hover {
+                background-color: darken($color: $bluedragNdrop, $amount: 10%);
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

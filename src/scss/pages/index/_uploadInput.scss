@@ -1,0 +1,29 @@
+.upload-input-container {
+    position: relative;
+
+    input {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        opacity: 0.01s;
+    }
+
+    .flex-upload-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    label {
+        margin-top: $baseUnit;
+        padding: 0.7rem $baseUnit;
+        background-color: $bluedragNdrop;
+        color: $white;
+        font-weight: $thin;
+        border-radius: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($bluedragNdrop, 10%);
+        }
+    }
+}

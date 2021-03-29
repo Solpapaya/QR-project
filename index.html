@@ -24,12 +24,13 @@
         </div>
         <span class="right-border"></span>
     </aside>
-    <main class="not-uploaded">
-        <section id="section-1" class="upload-section container">
-            <h2>Sube tu Comprobante Fiscal</h2>
+    <main class="container upload-section-selected">
+        <section id="section-1" class="upload-section">
             <form class="form" onsubmit="getData();return false" method="post" enctype="multipart/form-data">
                 <div class="field">
                     <div class="upload-input-container">
+                        <div class="upload-icon"><i class="fas fa-folder"></i></div>
+                        <h2>Sube tu Comprobante Fiscal</h2>
                         <p>Arrastra aquí el PDF del Comprobante Fiscal o puedes dar click en el botón para seleccionarlo</p>
                         <div class="flex-upload-container">
                             <label class="no-select" for="fileToUpload">Subir Archivo</label>
@@ -37,7 +38,7 @@
                         <!-- <input type="file" name="fileToUpload" accept=".pdf" id="fileToUpload" onchange="this.form.submit()"> -->
                     </div>
                 </div>
-                <input type="submit" value="Upload Image" name="submit">
+                <input type="submit" name="submit">
             </form>
             <!-- <div class="lds-dual-ring"></div> -->
         </section>

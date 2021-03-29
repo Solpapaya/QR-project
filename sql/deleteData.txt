@@ -1,2 +1,2 @@
 DELETE FROM comprobante_fiscal
-qr_fecha_prueba-# WHERE rfc_emisor = 'SUCC961125A15';
+WHERE rfc_emisor = 'SUCC961125A15';

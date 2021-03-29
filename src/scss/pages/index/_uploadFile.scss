@@ -1,0 +1,45 @@
+.upload-section-selected {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-section {
+    border: 3px dashed $gray;
+    border-radius: 3rem;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $grayBackground;
+    transition: $timing;
+
+    .upload-icon {
+        font-size: $baseUnit*5;
+        color: $bluedragNdrop;
+        text-align: center;
+        margin-bottom: $baseUnit*5;
+        transition: $timing;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    &.highlight {
+        border: 3px solid $bluedragNdrop;
+
+        .upload-icon {
+            color: darken($color: $bluedragNdrop, $amount: 10%);
+        }
+    }
+}
+
+.form {
+    input[type="submit"] {
+        display: none;
+    }
+}
