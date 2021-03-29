@@ -7,6 +7,8 @@
     user-select: none;
 }
 
+// Fix margin in order to not being selectable
+
 .right-bottom-radius {
     position: relative;
     border-bottom: 12px solid $white;
