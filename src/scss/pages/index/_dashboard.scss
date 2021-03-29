@@ -23,40 +23,48 @@ body {
     }
     
 
-    .sidebar-item {
+    .sidebar-item-container {
         display: flex;
-        align-items: center;
-        color: darken($color: $white, $amount: 20%);
-        padding: $baseUnit $baseUnit*1.5;
         width: 100%;
-        font-size: $baseUnit - 0.2rem;
-        font-weight: $thin;
-        text-align: justify;
+        
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            padding: $baseUnit $baseUnit*1.5;
+            color: darken($color: $white, $amount: 20%);
+            width: 100%;
+            font-size: $baseUnit - 0.2rem;
+            font-weight: $thin;
+            text-align: start;
+            z-index: 1;
+
+            &:hover {
+                color: $white;
+                font-weight: $regular;
+            }
+        }
 
         .sidebar-item-icon {
             margin-right: $baseUnit;
-        }
 
-        &:hover {
-            color: $white;
-            font-weight: $regular;
+            &.fa-edit {
+                margin-right: $baseUnit - 0.525rem;
+            }
         }
     }
 
-    .sidebar-item.selected {
+    .sidebar-item-container.selected {
         background-color: $white;
-        color: $black;
-        font-weight: $bold;
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
-        padding-right: 0;
+        border-right: 12px solid $white;
+        margin: -12px 0;
+        
+        .sidebar-item {
+            color: $black;
+            font-weight: $bold;
+        }
 
         .sidebar-item-icon {
             color: blue;
         }
-    }
-
-    button {
-        background-color: transparent;
     }
 }

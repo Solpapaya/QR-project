@@ -13,12 +13,16 @@
 </head>
 <body class="not-uploaded">
     <aside class="sidebar">
-        <div class="logo-container right-radius">
+        <div class="logo-container right-bottom-radius">
             <button class="logo" data-section="1"><i class="fas fa-qrcode"></i></button>
         </div>
-        <button class="sidebar-item right-bottom-radius" data-section="1"><i class="fas fa-file sidebar-item-icon"></i> Subir Archivo <span class="border-radius"></span></button>
-        <button class="sidebar-item selected" data-section="2"><i class="fas fa-edit sidebar-item-icon"></i> Editar Registros <span class="border-radius"></span></button>
-        <span class="right-top-radius"></span>
+        <div class="sidebar-item-container selected">
+            <button class="sidebar-item" data-section="1"><i class="fas fa-file sidebar-item-icon"></i> Subir Archivo</button>
+        </div>
+        <div class="sidebar-item-container right-top-radius">
+            <button class="sidebar-item" data-section="2"><i class="fas fa-edit sidebar-item-icon"></i> Editar Registros</button>
+        </div>
+        <span class="right-radius"></span>
     </aside>
     <main class="not-uploaded">
         <section id="section-1" class="upload-section container">
