@@ -1,7 +1,7 @@
 async function getData() {
-    createLoading();
+    createLoadingAnimation();
     await fetchData();
-    deleteLoading();
+    deleteLoadingAnimation();
 }
 
 function deleteLoading() {

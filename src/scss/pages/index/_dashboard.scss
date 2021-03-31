@@ -54,8 +54,8 @@ body {
     }
 
     .sidebar-item-container.selected {
-        background-color: $white;
-        border-right: 12px solid $white;
+        background-color: $grayBackground;
+        border-right: 12px solid $grayBackground;
         margin: -12px 0;
         
         .sidebar-item {

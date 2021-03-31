@@ -7,12 +7,10 @@
     user-select: none;
 }
 
-// Fix margin in order to not being selectable
-
 .right-bottom-border {
     position: relative;
-    border-bottom: 12px solid $white;
-    border-right: 12px solid $white;
+    border-bottom: 12px solid $grayBackground;
+    border-right: 12px solid $grayBackground;
     border-bottom-right-radius: 3rem;
 
     &::after {
@@ -20,15 +18,15 @@
         position: absolute;
         bottom: -12px;
         right: -12px;
-        border: 15px solid $white;
-        border-color: transparent $white $white transparent;
+        border: 15px solid $grayBackground;
+        border-color: transparent $grayBackground $grayBackground transparent;
     }
 }
 
 .right-top-border {
     position: relative;
-    border-top: 12px solid $white;
-    border-right: 12px solid $white;
+    border-top: 12px solid $grayBackground;
+    border-right: 12px solid $grayBackground;
     border-top-right-radius: 3rem;
 
     &::after {
@@ -36,13 +34,13 @@
         position: absolute;
         top: -12px;
         right: -12px;
-        border: 15px solid $white;
-        border-color: $white $white transparent transparent;
+        border: 15px solid $grayBackground;
+        border-color: $grayBackground $grayBackground transparent transparent;
     }
 }
 
 .right-border {
-    border-right: 12px solid $white;   
+    border-right: 12px solid $grayBackground;   
 }
 
 // .right-bottom-radius {
