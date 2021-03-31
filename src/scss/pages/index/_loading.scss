@@ -2,6 +2,10 @@
     position: absolute;
     width: 0;
     opacity: 0;
+
+    path {
+        fill: url('#myGradient');
+    }
     
     &.show {
         position: fixed;
@@ -9,11 +13,6 @@
         height: 100%;
         opacity: 1;
         z-index: 2;
-
-        path {
-            fill: url('#myGradient');
-            animation: loadPage 1s forwards;
-        }
 
         .loading-animation {
             position: absolute;
@@ -59,10 +58,6 @@
 
         .loading-animation {
             animation: middleLoadingAnimation 0.5s infinite, hideLoadingAnimation 0.5s forwards;
-        }
-
-        path {
-            animation: removeLoadPage 1s forwards;
         }
     }
     
