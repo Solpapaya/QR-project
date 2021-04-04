@@ -43,7 +43,46 @@
     border-right: 12px solid $grayBackground;   
 }
 
-// .right-bottom-radius {
+
+
+// .right-bottom-border {
+//     position: relative;
+//     border-bottom: 12px solid yellow;
+//     border-right: 12px solid yellow;
+//     border-bottom-right-radius: 3rem;
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         bottom: -12px;
+//         right: -12px;
+//         border: 15px solid $black;
+//         border-color: transparent $black $black transparent;
+//     }
+// }
+
+// .right-top-border {
+//     position: relative;
+//     border-top: 12px solid yellow;
+//     border-right: 12px solid yellow;
+//     border-top-right-radius: 3rem;
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         top: -12px;
+//         right: -12px;
+//         border: 15px solid $black;
+//         border-color: $black $black transparent transparent;
+//     }
+// }
+
+// .right-border {
+//     border-right: 12px solid yellow;   
+// }
+
+
+// .right-bottom-border {
 //     position: relative;
 //     border-bottom: 4px solid $white;
 //     border-right: 4px solid $white;
@@ -59,7 +98,7 @@
 //     }
 // }
 
-// .right-top-radius {
+// .right-top-border {
 //     position: relative;
 //     border-top: 4px solid $white;
 //     border-right: 4px solid $white;
@@ -75,6 +114,6 @@
 //     }
 // }
 
-// .right-radius {
+// .right-border {
 //     border-right: 4px solid $white;   
 // }
